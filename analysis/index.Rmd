@@ -1,10 +1,10 @@
 ---
+site: workflowr::wflow_site
 title: "Home"
 ---
 
-**Last updated:** `r Sys.Date()`
 
-**Code version:** `r system("git log -1 --format='%H'", intern = TRUE)`
+
 
 ## Inference
 
@@ -21,15 +21,35 @@ title: "Home"
 *  [The Likelihood Function](likelihood_function.html)
 *  [Asymptotic Normality of MLE](asymptotic_normality_mle.html)
 
-### Simple Bayesian Inference
+### Bayesian Inference
 
-*  [Posterior Distribution for multi-model comparisons](bayes_multiclass.html)
-*  [Simple example: Bayesian inference for normal mean (known variance)](shiny_normal_example.html)
-*  [Relationship between Bayes Factor and p value](BF_and_pvalue.html)
+*  [Bayesian inference for comparing two fully-specified models](LR_and_BF.html)
+*  [Bayesian inference for comparing multiple fully-specified models](bayes_multiclass.html)
+*  [Bayesian inference for a continuous parameter: analytic calculation](bayes_beta_binomial.html)
+*  [Bayesian inference for a continuous parameter: summarizing the posterior](summarize_interpret_posterior.html)
+*  [Bayesian inference for a continuous parameter: conjugacy](bayes_conjugate.html)
+*  [Bayesian inference for a normal mean](bayes_conjugate_normal_mean.html)
+*  [Bayesian inference for a normal mean (shiny app illustration)](shiny_normal_example.html)
+*  [Bayesian inference for multiple independent parameters](bayes_independent.html)
+
+
+### Empirical Bayes
+
+* [The Empirical Bayes Normal Means problem](ebnm_normal.html)
+
+
+
+### Frequentist vs Bayesian Inference
+
+* [The difficulty calibrating p values](pvalue_difficult_calibrate_example.html)
+* [Relationship between Bayes Factor and p value](BF_and_pvalue.html)
+* [Conditional coverage of a standard normal CI](CI_conditional_coverage.html)
+
 
 ### Decision Theory
 
 *  [Making a decision under uncertainty: the two class problem](decisions_costs_intro.html)
+*  [Brief introduction to decision theory for prediction problems](decision_theory_bayes_rule.html)
 
 ### Mixture Models
 
@@ -39,25 +59,47 @@ title: "Home"
 ### Bayesian Computation
 
 * [Every Bayesian computation is an integral (or a sum)](integral.html)
-* [Importance sampling](Importance_sampling.html)
 
 ### Markov Chain Monte Carlo
 
+* [The Metropolis--Hastings algorithm](MH_intro.html)
+* [Simple examples of Metropolis--Hastings algorithm](MH-examples1.html)
 * [Introduction to Gibbs Sampling](gibbs1.html)
-* [Gibbs Sampling for a simple normal mixture](gibbs2.html)
+* [Gibbs Sampling for a univariate normal mixture](gibbs2.html)
+* [Gibbs Sampling for a mixture of product-bernoullis](gibbs_structure_simple.html)
+
+
+### Hidden Markov Models
+
+* [Forwards Backwards calculation example](hmm.html)
+
+
+## Probability Distributions and Sampling From Them
+
+* [The Beta Distribution](beta.html)
+* [The Dirichlet Distribution](dirichlet.html)
+* [The Pólya--Gamma Distribution](polya_gamma.html)
+* [Multivariate Normal](mvnorm.html)
+* [Multivariate Normal: The Precision Matrix, illustrated with a Markov Chain](normal_markov_chain.html)
+
+### Methods for sampling non-standard distributions
+
+*  [Inverse Transform Sampling](inverse_transform_sampling.html)
+
+### Monte Carlo Methods  
+*  [Monte Carlo sampling](Monte_Carlo_sampling.html)
+*  [Importance sampling](Importance_sampling.html)
+*  Also see Markov Chain Monte Carlo and Gibbs Sampling (above under Inference)
 
 
 ## Stochastic Processes
 
 ### Discrete-Time Markov Chains
+
 *  [Discrete-Time Markov Chains: Introduction](markov_chains_discrete_intro.html)
-
 *  [Discrete-Time Markov Chains: Finding the Stationary Distribution via solution of the global balance equations](stationary_distribution.html)
-
 *  [Discrete-Time Markov Chains: Finding the Stationary Distribution via eigendecomposition](markov_chains_discrete_stationary_dist.html)
-
 *  [Simulating Discrete-Time Markov Chains: An Introduction](simulating_discrete_chains_1.html)
-
 *  [Simulating Discrete-Time Markov Chains: Limiting Distributions](simulating_discrete_chains_2.html)
 
 ### Poisson Processes
@@ -65,17 +107,13 @@ title: "Home"
 *  [Poisson Processes: Thinning with time-dependent probabilities](poisson_process_time_dependent_thinning.html)
 *  [Poisson Process: The Limiting Case of the Bernoulli Process](bernoulli_poisson_process.html)
 
-### Methods for sampling non-standard distributions
+### Gaussian Process
 
-*  [Inverse Transform Sampling](inverse_transform_sampling.html)
+* [Introduction to Gaussian Processes](gaussian_process.html)
 
+## Examples from Population Genetics
 
-### Multivariate Normal
-
-* [Multivariate Normal](mvnorm.html)
-* [Normal Markov Chain](normal_markov_chain.html)
-
-## Population Genetics
-
+* [Simulating from a simple genetic mixture model](r_simplemix.html)
 * [Wright-Fisher Model](wright_fisher_model.html)
 * [Wright-Fisher Model Approximations](approx_wright_fisher_model.html)
+
